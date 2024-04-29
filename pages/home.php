@@ -1,6 +1,11 @@
 <?php
+include "./class/Documents.php";
+$myDocuments = new Documents();
+$allDocuments = $myDocuments->getAllDocuments();
+$getCategory = $myDocuments->getCategory();
+$getByPopular = $myDocuments->getByPopular();
 ?>
-<main class="bg-[url('./assets/ellipse.png')] bg-auto dark:bg-[url('')]  dark:bg-black">
+<main class="bg-[url('./assets/background.png')] bg-auto dark:bg-[url('')]  dark:bg-black">
         <div id="hero" class="w-full h-[85svh] py-3 px-5 mb-3">
                 <div id="top"
                         class="flex flex-wrap flex-column justify-center items-center w-full h-full mx-auto  bg-[url('./assets/image-3.png')] rounded-xl bg-cover bg-center bg-no-repeat text-center background-image-animation overflow-hidden grayscale-[10%]">

@@ -1,15 +1,8 @@
 <?php
 
-class Plans
+class Plans extends Connection
 {
-    private $plans;
-    private $connect;
-
-    public function __construct($conn)
-    {
-        $this->plans = array();
-        $this->connect = $conn;
-    }
+    private $plans = array();
 
     public function getAllPlans()
     { // method buat ambil semua data plans, return value nya berupa array
@@ -62,20 +55,21 @@ class Plans
             duration = $duration,
             description = $description
             ) WHERE id=$id";
-        
+
         $result = mysqli_query($this->connect, $sql);
 
-        if($result){
+        if ($result) {
             return true;
         }
         return false;
     }
 
-    public function deletePlan($id){
+    public function deletePlan($id)
+    {
         $sql = "DELETE FROM tbl_plans WHERE id=$id";
         $result = mysqli_query($this->connect, $sql);
 
-        if($result){
+        if ($result) {
             return true;
         }
         return false;

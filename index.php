@@ -1,13 +1,5 @@
 <?php
 require_once "./class.Connect.php";
-require_once "./class/Documents.php";
-
-$objConn = new Class_Connect();
-$conn = $objConn->connect();
-$myDocuments = new Documents($conn);
-$allDocuments = $myDocuments->getAllDocuments();
-$getCategory = $myDocuments->getCategory();
-$getByPopular = $myDocuments->getByPopular();
 ?>
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth transition-all">

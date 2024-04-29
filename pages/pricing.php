@@ -1,10 +1,10 @@
 <?php
 require_once "./class/Plans.php";
 
-$plans = new Plans($conn);
+$plans = new Plans();
 $getAllPlans = $plans->getAllPlans();
 ?>
-<main class="bg-white dark:bg-black px-5 py-3">
+<main class="bg-[url('./assets/background.png')] dark:bg-black px-5 py-3">
     <div class="flex flex-col justify-center items-center gap-10 py-10">
         <h1 class="flex-auto w-full text-center font-extrabold text-3xl md:text-5xl text-black dark:text-white">Pick
             Your Perfect

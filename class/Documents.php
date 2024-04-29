@@ -1,5 +1,5 @@
 <?php
-class Documents
+class Documents extends Connection
 {
     // d = document
     private $d_id;
@@ -13,23 +13,6 @@ class Documents
     private $d_category;
     private $u_id;
     private $d_page;
-    private $connect;
-
-    public function __construct($conn) // constructor dengan sebuah parameter connect ke database
-    {
-        $this->d_id = 0;
-        $this->d_title = "";
-        $this->d_author = "";
-        $this->d_description = "";
-        $this->d_read = 0;
-        $this->d_date = "0000-00-00";
-        $this->d_status = "";
-        $this->d_img = "";
-        $this->d_category = "";
-        $this->u_id = 0;
-        $this->d_page = 0;
-        $this->connect = $conn; // parameter $conn di inisialisasi ulang
-    }
 
     public function getAllDocuments() //method mengambil semua data documents
     {
